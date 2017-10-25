@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "requirejs-react-jsx": "^1.0.2"
   }
 }

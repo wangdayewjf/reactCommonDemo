@@ -5,15 +5,15 @@ require.config({
         'underscore':'lib/underscore', //用于requirejs导入html类型的依赖
         'nomalSelf':'nomal/nomalSelf',
         'jquery.icheck':'lib/icheck.min',
-        'react':'https://unpkg.com/react@16/umd/react.production.min',
-        'reactDom':'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js',
-        'babel':'https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js',
+        
         'backbone':'lib/backbone',
 
-        react: 'vendor/react-with-addons.min',
-        "JSXTransformer": 'vendor/JSXTransformer'
+        "react": "lib/react/react.production.min",
+        'reactDom':'lib/react/react-dom.production.min',
 
-        text: 'vendor/text',
+        "babel": "lib/requirejs-react-jsx/babel-5.8.34.min",
+        "jsx": "lib/requirejs-react-jsx/jsx",
+        "text": "lib/requirejs-text/text"
     },
     shim:{
     	
@@ -39,9 +39,18 @@ require.config({
         'backbone':{
             deps: ['jquery','underscore'],
             exports:'backbone'
-        }
+        },
+        "react": {
+          "exports": "React"
+        },
+        config: {
+            babel: {
+              sourceMaps: "inline", // One of [false, 'inline', 'both']. See https://babeljs.io/docs/usage/options/ 
+              fileExtension: ".jsx" // Can be set to anything, like .es6 or .js. Defaults to .jsx 
+            }
+          }
         
     }
 });
 
-require(['main'], function(main) {});
+require(['jsx!main'], function(main) {});
