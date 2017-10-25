@@ -16,6 +16,8 @@ define(function() {
             if (key) c[key] = val;
             return c;
         },
+
+        
         // 略去...
     };
 });
