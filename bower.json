@@ -1,0 +1,24 @@
+{
+  "name": "1",
+  "homepage": "https://github.com/wangdayewjf/reactCommonDemo",
+  "authors": [
+    "wangjianfeng <wang.jianfeng@yahoo.com>"
+  ],
+  "description": "ceshidemo",
+  "main": "mian.js",
+  "keywords": [
+    "xxx"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
